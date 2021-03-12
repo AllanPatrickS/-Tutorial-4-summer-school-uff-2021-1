@@ -1,18 +1,27 @@
-def fatorial(n):
-    n_fat = 1
+class functions:
+    def __init__(self, n: int):
+        self.n = n
 
-    for i in range(2, n+1):
-        n_fat = n_fat * i
+    def fatorial(self, n):
+        n_fat = 1
 
-    print("%d! = %d" % (n, n_fat))
+        for i in range(2, n+1):
+            n_fat = n_fat * i
 
+        print("%d! = %d" % (n, n_fat))
 
-def fibonacci(n):
-    if n <= 1:
-        return n
-    else:
-        return(fibonacci(n-1) + fibonacci(n-2))
+    def fibonacci(self, n):
+        if n <= 1:
+            return n
+        else:
+            return(self.fibonacci(n-1) + self.fibonacci(n-2))
 
+    def __call__(self):
+        n = self.n
+        print("Fatorial: ", end='')
+        self.fatorial(n)
+        print("Fibonacci ", end='')
+        for i in range(0, n):
+            print("%d " % self.fibonacci(i), end='')
 
-fibonacci(5)
-fatorial(5)
+functions(5)()
