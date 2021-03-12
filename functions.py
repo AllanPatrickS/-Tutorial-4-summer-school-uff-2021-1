@@ -18,6 +18,7 @@ class functions:
 
     def __call__(self):
         n = self.n
+        print("-- functions --")
         print("Fatorial: ", end='')
         self.fatorial(n)
         print("Fibonacci ", end='')
